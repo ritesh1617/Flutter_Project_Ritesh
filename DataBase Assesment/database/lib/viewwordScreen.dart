@@ -35,7 +35,7 @@ class _ViewWordsScreenState extends State<ViewWordsScreen> {
             List<Word>? words = snapshot.data;
             return ListView.builder(
               itemCount: words?.length,
-              itemBuilder: (context, index) {
+              itemBuilder: (context, index) { 
                 Word word = words![index];
                 return ListTile(
                   title: Text(word.word),
