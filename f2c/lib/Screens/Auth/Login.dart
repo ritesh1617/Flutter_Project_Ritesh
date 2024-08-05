@@ -8,9 +8,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final TextEditingController titleController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,9 +28,20 @@ class _LoginPageState extends State<LoginPage> {
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: LoginForm(
-                titleController: titleController,
-                emailController: emailController,
-                passwordController: passwordController,
+                //textfield 1
+                label: 'E-mail',
+                licon: Icons.email,
+                obscureText: false,
+                onChanged: (p0) {},
+                //textfield2
+                label2: 'Password',
+                licon2: Icons.lock,
+                obscureText2: true,
+                onChanged2: (p0) {},
+
+                frogetpassword: '',
+                buttontext: 'Login',
+                textbutton: 'Don\'t have an account? signup',
               ), // Use the new LoginForm widget
             ),
           ),

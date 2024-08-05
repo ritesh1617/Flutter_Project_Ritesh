@@ -4,11 +4,13 @@ class CustomTextField extends StatelessWidget {
   final String label;
   final bool obscureText;
   final Function(String) onChanged;
+  final IconData licon;
 
   CustomTextField({
     required this.label,
     this.obscureText = false,
     required this.onChanged,
+    required this.licon,
   });
 
   @override
@@ -20,7 +22,7 @@ class CustomTextField extends StatelessWidget {
         labelText: label,
         labelStyle: TextStyle(color: Colors.white),
         prefixIcon: Icon(
-          obscureText ? Icons.lock : Icons.email,
+          licon,
           color: Colors.white,
         ),
         enabledBorder: UnderlineInputBorder(

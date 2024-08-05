@@ -1,15 +1,33 @@
 // New reusable LoginForm widget
+import 'package:f2c/widgets/Customtextfield.dart';
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatelessWidget {
-  final TextEditingController titleController; // Controller for title
-  final TextEditingController emailController; // Controller for email
-  final TextEditingController passwordController; // Controller for password
+  final String frogetpassword;
+  final String buttontext;
+  final String textbutton;
+  final String label;
+  final bool obscureText;
+  final Function(String) onChanged;
+  final IconData licon;
+  final String label2;
+  final bool obscureText2;
+  final Function(String) onChanged2;
+  final IconData licon2;
 
-  LoginForm({
-    required this.titleController,
-    required this.emailController,
-    required this.passwordController,
+  const LoginForm({
+    super.key,
+    required this.frogetpassword,
+    required this.buttontext,
+    required this.textbutton,
+    required this.label,
+    required this.obscureText,
+    required this.onChanged,
+    required this.licon,
+    required this.label2,
+    required this.obscureText2,
+    required this.onChanged2,
+    required this.licon2,
   });
 
   @override
@@ -24,7 +42,44 @@ class LoginForm extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           SizedBox(height: 20.0),
-          SizedBox(height: 20.0),
+          TextField(
+            obscureText: obscureText,
+            onChanged: onChanged,
+            decoration: InputDecoration(
+              labelText: label,
+              labelStyle: TextStyle(color: Colors.white),
+              prefixIcon: Icon(
+                licon,
+                color: Colors.white,
+              ),
+              enabledBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.white),
+              ),
+              focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.white),
+              ),
+            ),
+            style: TextStyle(color: Colors.white),
+          ),
+          TextField(
+            obscureText: obscureText2,
+            onChanged: onChanged2,
+            decoration: InputDecoration(
+              labelText: label2,
+              labelStyle: TextStyle(color: Colors.white),
+              prefixIcon: Icon(
+                licon2,
+                color: Colors.white,
+              ),
+              enabledBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.white),
+              ),
+              focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.white),
+              ),
+            ),
+            style: TextStyle(color: Colors.white),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -45,7 +100,7 @@ class LoginForm extends StatelessWidget {
               TextButton(
                 onPressed: () {},
                 child: Text(
-                  'FORGET PASSWORD',
+                  frogetpassword,
                   style: TextStyle(color: Colors.white),
                 ),
               ),
@@ -62,13 +117,13 @@ class LoginForm extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30.0),
               ),
             ),
-            child: Text('Log In'),
+            child: Text(buttontext),
           ),
           SizedBox(height: 20.0),
           TextButton(
             onPressed: () {},
             child: Text(
-              "Don't have an account? REGISTER",
+              textbutton,
               style: TextStyle(color: Colors.white),
             ),
           ),

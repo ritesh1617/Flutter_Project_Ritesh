@@ -8,10 +8,15 @@ Widget Button_(
     Color? textcolor,
     double? textsize}) {
   return ElevatedButton(
-    onPressed: onpress,
-    child: title!.text.color(textcolor).size(textsize).make(),
-    style: ButtonStyle(
-      backgroundColor: MaterialStatePropertyAll(color),
+    onPressed: () {},
+    style: ElevatedButton.styleFrom(
+      foregroundColor: Colors.black,
+      backgroundColor: Colors.white,
+      padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 15.0),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30.0),
+      ),
     ),
+    child: title!.text.color(textcolor).size(textsize).make(),
   );
 }
