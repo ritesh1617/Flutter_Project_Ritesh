@@ -14,6 +14,9 @@ class LoginForm extends StatelessWidget {
   final bool obscureText2;
   final Function(String) onChanged2;
   final IconData licon2;
+  final VoidCallback ElevetdonPress;
+  final VoidCallback forgetonPress;
+  final VoidCallback onPress; // Added onPress
 
   const LoginForm({
     super.key,
@@ -28,6 +31,9 @@ class LoginForm extends StatelessWidget {
     required this.obscureText2,
     required this.onChanged2,
     required this.licon2,
+    required this.ElevetdonPress,
+    required this.forgetonPress,
+    required this.onPress,
   });
 
   @override
@@ -98,7 +104,7 @@ class LoginForm extends StatelessWidget {
                 ],
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: forgetonPress,
                 child: Text(
                   frogetpassword,
                   style: TextStyle(color: Colors.white),
@@ -108,7 +114,7 @@ class LoginForm extends StatelessWidget {
           ),
           SizedBox(height: 20.0),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: ElevetdonPress,
             style: ElevatedButton.styleFrom(
               foregroundColor: Colors.black,
               backgroundColor: Colors.white,
@@ -121,7 +127,7 @@ class LoginForm extends StatelessWidget {
           ),
           SizedBox(height: 20.0),
           TextButton(
-            onPressed: () {},
+            onPressed: onPress,
             child: Text(
               textbutton,
               style: TextStyle(color: Colors.white),

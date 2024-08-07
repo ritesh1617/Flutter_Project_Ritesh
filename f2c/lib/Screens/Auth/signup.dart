@@ -40,6 +40,10 @@ class _signupPageState extends State<signuppage> {
                 licon2: Icons.lock,
                 obscureText2: true,
                 onChanged2: (p0) {},
+                //--------
+                ElevetdonPress: () {},
+                forgetonPress: () {},
+                onPress: () {},
 
                 frogetpassword: '',
                 buttontext: 'SignUp',

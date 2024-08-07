@@ -1,6 +1,8 @@
+import 'package:f2c/Screens/Auth/signup.dart';
 import 'package:f2c/Theme/strings.dart';
 import 'package:f2c/widgets/login/signupwidegt.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -38,8 +40,14 @@ class _LoginPageState extends State<LoginPage> {
                 licon2: Icons.lock,
                 obscureText2: true,
                 onChanged2: (p0) {},
+                //-----
+                ElevetdonPress: () {
+                  Get.to(signuppage());
+                },
+                forgetonPress: () {},
+                onPress: () {},
 
-                frogetpassword: '',
+                frogetpassword: 'Forget password?',
                 buttontext: 'Login',
                 textbutton: 'Don\'t have an account? signup',
               ), // Use the new LoginForm widget

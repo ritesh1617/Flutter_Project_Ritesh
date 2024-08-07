@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:f2c/Screens/Auth/Login.dart';
+import 'package:f2c/Screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -17,7 +18,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 3), () => Get.offAll(() => LoginPage()));
+    Timer(Duration(seconds: 3), () => Get.offAll(() => const Homescreen()));
   }
 
   Widget build(BuildContext context) {
