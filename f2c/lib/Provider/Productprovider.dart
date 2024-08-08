@@ -30,4 +30,14 @@ class ProductProvider with ChangeNotifier {
     _wishlist.add(product);
     notifyListeners();
   }
+
+  void removeFromCart(Product product) {
+    _cart.remove(product);
+    notifyListeners();
+  }
+
+  void removeFromWishlist(Product product) {
+    _wishlist.remove(product);
+    notifyListeners();
+  }
 }

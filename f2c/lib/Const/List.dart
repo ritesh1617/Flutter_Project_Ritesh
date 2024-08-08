@@ -4,11 +4,11 @@ import 'package:f2c/Theme/strings.dart';
 List images1 = [img1, img2, img3];
 
 //ProductImage
-List images2 = [adrak, kakdi, milk, tomato, apple, kiwi, mango];
+List<String> images2 = [adrak, kakdi, milk, tomato, apple, kiwi, mango];
 
 //HomeScreen Text
-List ProductName = [Adrak, kakdi, Milk, Tomato, Apple, Kiwi, Mango];
-List ProductPrice = [
+List<String> ProductName = [Adrak, kakdi, Milk, Tomato, Apple, Kiwi, Mango];
+List<String> ProductPrice = [
   Adrakprice,
   Kakdiprice,
   Milkprice,
@@ -17,7 +17,7 @@ List ProductPrice = [
   kiwiprice,
   MangoPrice
 ];
-List Productgrams = [
+List<String> Productgrams = [
   Adrakgrams,
   Kakdigrams,
   Milkgrams,

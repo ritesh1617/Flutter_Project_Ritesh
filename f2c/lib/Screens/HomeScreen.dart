@@ -1,5 +1,6 @@
 import 'package:app_bar_with_search_switch/app_bar_with_search_switch.dart';
 import 'package:f2c/Const/List.dart';
+import 'package:f2c/Provider/ProductSearchDelegate.dart';
 import 'package:f2c/Theme/strings.dart';
 import 'package:f2c/Theme/style.dart';
 import 'package:f2c/widgets/Gridview.dart';
@@ -18,18 +19,27 @@ class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarWithSearchSwitch(
-        appBarBuilder: (context) {
-          return AppBar(
-            title: Text(
-              Appname,
-              style: regularBlack10,
-            ),
-            actions: [
-              AppBarSearchButton(),
-            ],
-          );
-        },
+      appBar: AppBar(
+        title: Text(
+          Appname,
+          style: regularBlack10,
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              showSearch(
+                context: context,
+                delegate: ProductSearchDelegate(
+                  ProductName, // Product names
+                  images2, // Product images
+                  ProductPrice, // Product prices
+                  Productgrams, // Product grams
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: BackScreen(
         child: SingleChildScrollView(
