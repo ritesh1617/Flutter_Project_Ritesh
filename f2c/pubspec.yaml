@@ -45,6 +45,7 @@ dependencies:
   floating_bottom_navigation_bar: ^1.5.2
   app_bar_with_search_switch: ^1.8.5
   provider: ^6.1.2
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:

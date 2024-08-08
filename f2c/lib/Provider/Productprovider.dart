@@ -17,6 +17,9 @@ class Product {
 class ProductProvider with ChangeNotifier {
   List<Product> _cart = [];
   List<Product> _wishlist = [];
+  List<Product> _products = [];
+
+  List<Product> get products => _products;
 
   List<Product> get cart => _cart;
   List<Product> get wishlist => _wishlist;
@@ -38,6 +41,11 @@ class ProductProvider with ChangeNotifier {
 
   void removeFromWishlist(Product product) {
     _wishlist.remove(product);
+    notifyListeners();
+  }
+
+  void addProduct(Product product) {
+    _products.add(product);
     notifyListeners();
   }
 }
